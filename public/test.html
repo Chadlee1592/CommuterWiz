@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery.js"></script>
+ 
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+ 
+ 
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+ 
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<body>
+    <nav class="white" style="-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;">
+        <div class="nav-wrapper container">
+            <a href="" class="brand-logo green-text text-darken-2" style=" font-family: 'Lato', sans-serif">CommuterWiz</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons green-text text-darken-2">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="waves-effect waves-light btn" id="logOut">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="startingLabel" type="text" class="validate">
+                        <label for="startingLabel">Starting Location Label</label>
+                    </div>
+                    <div class="input-field col s6">
+                            <input id="destinationLabel" type="text" class="validate">
+                            <label for="destinationLable">Destination Location Label</label>
+                        </div>
+                </div>
+        
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="startingLocation" type="text" class="validate">
+                        <label for="startingLocation">Starting Location</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="destination" type="text" class="validate">
+                        <label for="destination">Destination</label>
+                    </div>
+                </div>
+                </div>
+            <div class="modal-footer">
+                <button class="btn waves-effect waves-light modal-close" type="submit" id="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>    
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="startingLabel1" type="text" class="validate">
+                        <label for="startingLabel1">Starting Location Label</label>
+                    </div>
+                    <div class="input-field col s6">
+                            <input id="destinationLabel1" type="text" class="validate">
+                            <label for="destinationLable1">Destination Location Label</label>
+                        </div>
+                </div>
+        
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="startingLocation1" type="text" class="validate">
+                        <label for="startingLocation1">Starting Location</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="destination1" type="text" class="validate">
+                        <label for="destination1">Destination</label>
+                    </div>
+                </div>
+                </div>
+            <div class="modal-footer">
+                <button class="btn waves-effect waves-light modal-close" type="submit" id="submit1" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>    
+        
+        <div class="row">
+            <div class="input-field col s4">
+                <a class="btn-floating btn-large waves-effect waves-light modal-trigger" href="#modal3"><i class="material-icons" style="font-size: 27px">add_location</i></a>
+                <button class="btn-floating btn-large waves-effect waves-light" style="margin-left: 5%;" id="refresh" name="action">
+                    <i class="material-icons" style="font-size: 27px">refresh</i>
+                </button>
+                <br><br>
+            </div>    
+
+            <h4 class="brand-logo green-text text-darken-2" style=" font-family: 'Lato', sans-serif">Saved Locations</h4>
+
+            <table class="responsive-table col s12 centered highlight">
+                    <thead>
+                      <tr>
+                          <th>Start</th>
+                          <th>Destination</th>
+                          <th>Distance</th>
+                          <th>Traffic</th>
+                          <th>Travel Time</th>
+                          <th>Last Refresh</th>
+                          <th>Update</th>
+                          <th>Delete</th>
+                      </tr>
+                    </thead>
+            
+                    <tbody>
+
+                    </tbody>
+                  </table>
+        </div>
+                        
+    
+    </div>
+
+    <script src="assets/js/appTwo.js"></script>
+
+</body>
+</html>
